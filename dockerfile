@@ -8,5 +8,7 @@ RUN curl -fsSLO --compressed "https://nodejs.org/dist/latest-v16.x/$NODE_FILE" \
     && npm --version
 RUN npm install -g yarn \
     && yarn --version
+RUN apt update
+RUN apt install -y vim
 RUN mkdir /root/workspace
 WORKDIR /root/workspace
